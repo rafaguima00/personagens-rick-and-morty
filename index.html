@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="img/png" href="img/logo2_rm.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Personagens de Rick and Morty</title>
+
+    <script src="https://kit.fontawesome.com/5f6af1e0cf.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1 class="posicao-imagem">
+            <img src="img/logo2_rm.png" alt="Logotipo" class="cabecalho-img">
+        </h1>
+        <h1 class="titulo-cabecalho">Rick and Morty Characters</h1>
+    </header>
+
+    <main>
+        <form id="form-buscar">
+            <div class="form-style">
+                <input type="text" name="buscar" id="input-buscar" class="buscar input-buscar" placeholder="Digite o nome do personagem">
+                <button type="submit" class="buscar button-item button-buscar"><i class="fa-solid fa-magnifying-glass"></i> buscar</button>
+            </div>
+        </form>
+
+        <ul id="mostrar-dados" class="lista-personagens"></ul>
+
+        <div class="buttons-prev-next">
+            <a href="#" class="botao" id="botao-prev"><i class="fa-solid fa-angle-left"></i> prev</a>
+            <a href="#" class="botao" id="botao-next">next <i class="fa-solid fa-angle-right"></i></a> 
+        </div>
+    </main>
+
+    <footer>
+        <img src="img/logo2_rm.png" alt="Logotipo" class="rodape-img">
+        <p>&copy Criado por Rafael Moreira</p>
+        
+        <ul class="rodape-links">
+            <li>
+                <a href="https://www.linkedin.com/in/rafael-guimarães-23362a218/" target="_blank"><img src="img/icons8-linkedin-30.png" class="link-perfil"></a>
+            </li>
+            <li>
+                <a href="https://github.com/rafaguima00?tab=repositories" target="_blank"><img src="img/icons8-github-30.png" class="link-perfil"></a>
+            </li>
+            <li>
+                <a href="https://web.whatsapp.com/send?phone=5571996634247" target="_blank"><img src="img/icons8-whatsapp-30.png"  class="link-perfil"></a>
+            </li>
+            <li>
+                <a href="mailto:rafael16gsm@gmail.com" target="_blank"><img src="img/icons8-mensagem-preenchida-30.png" class="link-perfil"></a>
+            </li>
+        </ul>
+        <p>Última atualização: Sábado, 22 de Abril de 2023</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

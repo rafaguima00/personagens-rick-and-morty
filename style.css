@@ -1,0 +1,170 @@
+:root {
+    --bg-color: #1D232A;
+    --bg-cabecalho: #15191C;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    background-color: var(--bg-cabecalho);
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid white;
+    align-items: center;
+}
+
+header h1 {
+    margin: .6rem 0;
+}
+
+.cabecalho-img {
+    width: 200px;
+}
+
+.titulo-cabecalho {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+main {
+    margin: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buscar {
+    padding: .75rem;
+    float: left;
+    border: 1px solid white;
+}
+
+.input-buscar {
+    border-radius: 6px 0 0 6px;
+    font-size: 1.05rem;
+}
+
+.button-buscar {
+    border-radius: 0 6px 6px 0;
+    text-transform: uppercase;
+    background-color: var(--bg-cabecalho);
+    font-size: 1.1rem;
+    color: white;
+}
+
+.button-item:hover {
+    cursor: pointer;
+    color: #C78C19;
+}
+
+.lista-personagens {
+    width: 95%;
+    margin: 1rem auto;
+}
+
+.itens {
+    background-color: #313d46;
+    width: 22%;
+    height: 65vh;
+    overflow: hidden;
+    border-radius: 1rem;
+    margin: 0 1.2% 2rem;
+    display: inline-block;
+    transition: 500ms;
+}
+
+.itens:hover {
+    transform: scale(1.05);
+}
+
+.itens div {
+    margin: .65rem;
+} 
+
+.info-personagens {
+    display: flex;
+    flex-direction: column;
+}
+
+.imagem-personagem {
+    width: 100%;
+}
+
+.nome-personagem {
+    font-size: 1.5rem;
+}
+
+.buttons-prev-next {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.botao {
+    border-radius: .8rem;
+    border: 1px solid white;
+    text-transform: uppercase;
+    background-color: var(--bg-cabecalho);
+    font-size: 1.1rem;
+    color: white;
+    padding: .8rem;
+}
+
+.botao:hover {
+    cursor: pointer;
+    color: #C78C19;
+}
+
+.buttons-prev-next button {
+    margin: 0 1.25rem;
+    text-transform: uppercase;
+    background-color: #15191C;
+    color: white;
+    border: 1px solid white;
+    padding: .75rem;
+    border-radius: 6px;
+}
+
+footer {
+    background-color: var(--bg-cabecalho);
+    width: 100%;
+    height: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 2px solid white;
+}
+
+footer p {
+    margin: 1rem;
+}
+
+.rodape-img {
+    margin-top: .6rem;
+    width: 5%;
+}
+
+.rodape-links li {
+    display: inline;
+}
+
+.link-perfil:hover {
+    transform: scale(1.075);
+}
