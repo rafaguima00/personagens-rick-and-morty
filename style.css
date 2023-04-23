@@ -41,6 +41,7 @@ header h1 {
 
 main {
     margin: 1rem;
+    align-items: center;
 }
 
 form {
@@ -74,6 +75,7 @@ form {
 }
 
 .lista-personagens {
+    display: block;
     width: 95%;
     margin: 1rem auto;
 }
@@ -89,17 +91,10 @@ form {
     transition: 500ms;
 }
 
-.itens:hover {
-    transform: scale(1.05);
-}
-
-.itens div {
-    margin: .65rem;
-} 
-
 .info-personagens {
     display: flex;
     flex-direction: column;
+    margin: .65rem;
 }
 
 .imagem-personagem {
@@ -107,7 +102,19 @@ form {
 }
 
 .nome-personagem {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+}
+
+.status-personagem {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+
+.bolinha {
+    width: .6rem;
+    height: .6rem;
+    border-radius: 16px;
 }
 
 .buttons-prev-next {

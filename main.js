@@ -45,13 +45,25 @@ form.onclick = function(evento) {
 }
 
 function mostrarDados(itens) {
+
+    if(itens.status == "Alive") {
+        corBolinha = "#55CC44"
+    } else if (itens.status == "Dead"){
+        corBolinha = "#D63D2E"
+    } else {
+        corBolinha = "#C78C19"
+    }
+
     lista.innerHTML += `
         <li class="itens">
             <img src="${itens.image}" alt="${itens.name}" class="imagem-personagem">
             <div class="info-personagens">
                 <p class="nome-personagem">${itens.name}</p>
                 <p class="species-personagem">Species: ${itens.species}</p>
-                <p class="status-personagem">Status: ${itens.status}</p>
+                <div class="status-personagem">
+                    <p>Status: ${itens.status}</p>
+                    <span class="bolinha" style="background-color: ${corBolinha};"></span>
+                </div>
             </div>
         </li>
     `
@@ -60,19 +72,23 @@ function mostrarDados(itens) {
 btPrev.addEventListener('click', (evento) => {
     evento.preventDefault()
 
-    lista.innerHTML = ""
-    recuperarDados(botaoPrev)
-
-    window.scrollTo(0, 0);
+    if(botaoPrev != null) {
+        lista.innerHTML = ""
+        recuperarDados(botaoPrev)
+    
+        window.scrollTo(0, 0);
+    }
 })
 
 btNext.addEventListener('click', (evento) => {
     evento.preventDefault()
 
-    lista.innerHTML = ""
-    recuperarDados(botaoNext)
-
-    window.scrollTo(0, 0);
+    if(botaoNext != null) {
+        lista.innerHTML = ""
+        recuperarDados(botaoNext)
+    
+        window.scrollTo(0, 0);
+    }
 })
 
 recuperarDados(urlApi)
