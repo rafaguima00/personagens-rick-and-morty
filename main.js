@@ -32,10 +32,10 @@ async function recuperarDados(url, name = '') {
 form.onclick = function(evento) {
     const inputForm = document.getElementById('input-buscar')
 
+    evento.preventDefault()
+
     if(inputForm.value !== "") {
         lista.innerHTML = ""
-
-        evento.preventDefault()
         recuperarDados(urlApi, inputForm.value)
     
         inputForm.value = ""
