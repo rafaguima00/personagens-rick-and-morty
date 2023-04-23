@@ -22,8 +22,6 @@ async function recuperarDados(url, name = '') {
 
     const arrayItens = urlConvertida.results
 
-    console.log(urlConvertida)
-
     arrayItens.forEach((elemento) => {
         mostrarDados(elemento)
     })
