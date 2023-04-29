@@ -41,7 +41,16 @@ header h1 {
 
 main {
     margin: 1rem;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mensagem-tela {
+    text-align: center;
+    margin: 2rem 0 0;
+    font-size: 1.25rem;
+    line-height: 1.5;
 }
 
 form {
@@ -58,7 +67,7 @@ form {
 
 .input-buscar {
     border-radius: 6px 0 0 6px;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
 }
 
 .button-buscar {
@@ -75,18 +84,19 @@ form {
 }
 
 .lista-personagens {
-    display: block;
-    width: 95%;
-    margin: 1rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem auto;
 }
 
 .itens {
     background-color: #313d46;
-    width: 22%;
-    height: 65vh;
     overflow: hidden;
+    width: 22%;
+    height: 70vh;
     border-radius: 1rem;
-    margin: 0 1.2% 2rem;
+    margin: 0 1% 2rem;
     display: inline-block;
     transition: 500ms;
 }
@@ -95,6 +105,7 @@ form {
     display: flex;
     flex-direction: column;
     margin: .65rem;
+    margin-bottom: 3rem;
 }
 
 .imagem-personagem {
@@ -150,8 +161,6 @@ form {
 
 footer {
     background-color: var(--bg-cabecalho);
-    width: 100%;
-    height: auto;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -174,4 +183,35 @@ footer p {
 
 .link-perfil:hover {
     transform: scale(1.075);
+}
+
+@media screen and (max-width: 480px) {
+    .lista-personagens {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem 1rem;
+    }
+
+    .cabecalho-img {
+        width: 160px;
+    }
+
+    .titulo-cabecalho {
+        font-size: 1.5rem;
+    }
+
+    main {
+        margin: 1rem 0;
+    }
+
+    .input-buscar, .button-buscar {
+        font-size: 1rem;
+    }
+
+    .itens {
+        width: 90%;
+        height: 75%;
+    }
 }
