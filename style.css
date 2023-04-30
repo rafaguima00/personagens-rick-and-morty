@@ -18,12 +18,10 @@ body {
 
 header {
     background-color: var(--bg-cabecalho);
-    height: auto;
-    width: auto;
     display: flex;
     flex-direction: column;
-    border-bottom: 2px solid white;
     align-items: center;
+    border-bottom: 2px solid white;
 }
 
 header h1 {
@@ -36,11 +34,10 @@ header h1 {
 
 .titulo-cabecalho {
     font-size: 2rem;
-    font-weight: bold;
 }
 
 main {
-    margin: 1rem;
+    margin: 1rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -78,7 +75,7 @@ form {
     color: white;
 }
 
-.button-item:hover {
+.button-buscar:hover {
     cursor: pointer;
     color: #C78C19;
 }
@@ -87,18 +84,16 @@ form {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 2rem auto;
+    margin: 2rem 0;
 }
 
 .itens {
     background-color: #313d46;
     overflow: hidden;
-    width: 22%;
+    width: 21vw;
     height: 70vh;
     border-radius: 1rem;
     margin: 0 1% 2rem;
-    display: inline-block;
-    transition: 500ms;
 }
 
 .info-personagens {
@@ -113,7 +108,7 @@ form {
 }
 
 .nome-personagem {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
 }
 
 .status-personagem {
@@ -125,7 +120,7 @@ form {
 .bolinha {
     width: .6rem;
     height: .6rem;
-    border-radius: 16px;
+    border-radius: 16rem;
 }
 
 .buttons-prev-next {
@@ -149,19 +144,8 @@ form {
     color: #C78C19;
 }
 
-.buttons-prev-next button {
-    margin: 0 1.25rem;
-    text-transform: uppercase;
-    background-color: #15191C;
-    color: white;
-    border: 1px solid white;
-    padding: .75rem;
-    border-radius: 6px;
-}
-
 footer {
     background-color: var(--bg-cabecalho);
-    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -186,14 +170,6 @@ footer p {
 }
 
 @media screen and (max-width: 480px) {
-    .lista-personagens {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 2rem 1rem;
-    }
-
     .cabecalho-img {
         width: 160px;
     }
@@ -210,8 +186,16 @@ footer p {
         font-size: 1rem;
     }
 
+    .lista-personagens {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem 1rem;
+    }
+
     .itens {
-        width: 90%;
+        width: 90vw;
         height: 75%;
     }
 }
