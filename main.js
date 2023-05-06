@@ -34,7 +34,7 @@ async function recuperarDados(url, name = '') {
         mensagemNaTela.remove()
 
     } catch (e) {
-        mensagemNaTela.innerText = "Nenhum registro"
+        mensagemNaTela.innerText = "Nenhum registro encontrado"
         botaoNext = null
     }
 
