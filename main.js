@@ -35,6 +35,7 @@ async function recuperarDados(url, name = '') {
 
     } catch (e) {
         mensagemNaTela.innerText = "Nenhum registro encontrado"
+        botaoPrev = null
         botaoNext = null
     }
 
@@ -70,11 +71,13 @@ function mostrarDados(itens) {
             <img src="${itens.image}" alt="${itens.name}" class="imagem-personagem">
             <div class="info-personagens">
                 <p class="nome-personagem">${itens.name}</p>
-                <p class="species-personagem">Species: ${itens.species}</p>
+                <p class="species-personagem"><strong>Species</strong>: ${itens.species}</p>
                 <div class="status-personagem">
-                    <p>Status: ${itens.status}</p>
+                    <p><strong>Status</strong>: ${itens.status}</p>
                     <span class="bolinha" style="background-color: ${corBolinha};"></span>
                 </div>
+                <p><strong>Origin</strong>: ${itens.origin.name}</p>
+                <p><strong>Location</strong>: ${itens.location.name}</p>
             </div>
         </li>
     `
