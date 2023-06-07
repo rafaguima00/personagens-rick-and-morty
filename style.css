@@ -1,6 +1,9 @@
 :root {
     --bg-color: #1D232A;
     --bg-cabecalho: #15191C;
+    --bg-card: #313d46;
+    --track-loading: rgba(231, 231, 231, 0.1);
+    --thumb-loading: #fff;
 }
 
 * {
@@ -40,12 +43,40 @@ main {
     justify-content: center;
 }
 
+.div-carregando {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: .6rem;
+}
+
 .mensagem-tela {
     text-align: center;
     margin: 2rem 0 0;
+    padding-bottom: 1.5rem;
     font-size: 1.25rem;
     line-height: 1.5;
 }
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.carregando {
+    border: 4px solid var(--track-loading);
+    border-top-color: var(--thumb-loading);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    animation: spin 0.7s infinite linear;
+} 
 
 form {
     display: flex;
@@ -85,12 +116,12 @@ form {
 }
 
 .itens {
-    background-color: #313d46;
+    background-color: var(--bg-card);
     overflow: auto;
     width: 20vw;
     height: 74vh;
     border-radius: 1rem;
-    margin: 0 2.35% 2rem;
+    margin: 0 2rem 2rem;
 }
 
 .itens::-webkit-scrollbar {
@@ -111,6 +142,7 @@ form {
     flex-direction: column;
     gap: 2px;
     margin: 0 .65rem;
+    letter-spacing: 0.6px;
 }
 
 .imagem-personagem {

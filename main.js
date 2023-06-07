@@ -1,14 +1,17 @@
 const urlApi = 'https://rickandmortyapi.com/api/character'
 const lista = document.getElementById('mostrar-dados')
-const mensagemNaTela = document.createElement('p')
+const mensagemNaTela = document.createElement('div')
 
 let botaoPrev = ''
 let botaoNext = ''
 
 async function recuperarDados(url, name = '') {
     
-    mensagemNaTela.innerText = "Carregando dados dos personagens..."
-    mensagemNaTela.classList.add('mensagem-tela')
+    mensagemNaTela.innerHTML = `
+        <span class="carregando"></span>
+        <p class="mensagem-tela">Carregando dados dos personagens...</p>
+    `
+    mensagemNaTela.classList.add('div-carregando')
     
     const main = document.querySelector('main')
     main.insertBefore(mensagemNaTela, main.children[1])
@@ -21,7 +24,7 @@ async function recuperarDados(url, name = '') {
         }
 
         var urlConvertida = await recuperarUrl.json()
-
+    
         botaoPrev = urlConvertida.info.prev
         botaoNext = urlConvertida.info.next
 
@@ -33,8 +36,11 @@ async function recuperarDados(url, name = '') {
 
         mensagemNaTela.remove()
 
-    } catch (e) {
-        mensagemNaTela.innerText = "Nenhum registro encontrado"
+    } catch {
+        mensagemNaTela.innerHTML = `
+        <p class="mensagem-tela">Nenhum personagem encontrado</p>
+    `
+        
         botaoPrev = null
         botaoNext = null
     }
@@ -53,7 +59,7 @@ form.onclick = function(evento) {
         recuperarDados(urlApi, inputForm.value)
     
         inputForm.value = ""
-    }
+    } 
 }
 
 function mostrarDados(itens) {
@@ -92,7 +98,7 @@ btPrev.addEventListener('click', (evento) => {
         recuperarDados(botaoPrev)
     
         window.scrollTo(0, 0);
-    }
+    } 
 })
 
 const btNext = document.getElementById('botao-next')
