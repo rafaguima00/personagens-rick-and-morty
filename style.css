@@ -214,6 +214,7 @@ footer p {
 .last-update {
     display: flex;
     flex-direction: row;
+    gap: 0;
 }
 
 @media screen and (max-width: 480px) {
