@@ -111,15 +111,15 @@ form {
 .lista-personagens {
     display: flex;
     flex-wrap: wrap;
-    justify-content:flex-start;
+    justify-content:center;
     margin: 2rem 0;
 }
 
 .itens {
     background-color: var(--bg-card);
     overflow: auto;
-    width: 20vw;
-    height: 74vh;
+    width: 18%;
+    min-height: 74%;
     border-radius: 1rem;
     margin: 0 2rem 2rem;
 }
@@ -209,6 +209,11 @@ footer p {
 
 .link-perfil:hover {
     transform: scale(1.075);
+}
+
+.last-update {
+    display: flex;
+    flex-direction: row;
 }
 
 @media screen and (max-width: 480px) {
